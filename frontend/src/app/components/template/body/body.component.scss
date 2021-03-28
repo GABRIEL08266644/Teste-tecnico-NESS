@@ -1,0 +1,13 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .routes {
+        box-shadow: inset 0 0 0.2em red, 0 0 0.5em red;
+        
+        height: 73vh;
+        width: 95vw;
+        padding: 15px;
+    }
+}

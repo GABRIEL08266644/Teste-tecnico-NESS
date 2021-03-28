@@ -1,0 +1,48 @@
+.top {
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+
+    .photo {
+        img {
+            height: 100px;
+
+            margin-top: 50px;
+        }
+    }
+}
+
+.low {
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    ul {
+        height: 35px;
+        width: 300px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li { 
+            list-style: none;
+            
+            a {
+                color: black;
+                
+                font-size: 1.5rem;
+                text-decoration: none;
+                transition: all 0.2s;
+            }
+
+            a:hover {
+                color: red;
+            }
+        }
+    }
+}
