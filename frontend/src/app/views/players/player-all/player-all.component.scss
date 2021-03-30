@@ -1,0 +1,25 @@
+.btns {
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    a {
+        padding: 10px;
+        margin: 18px;
+    
+        border-radius: 6px;
+        
+        background-color: black;
+        color: white;
+        
+        text-decoration: none;
+        
+        transition: all 0.3s;
+    }
+    a:hover {
+        color: red;
+    }
+}
+
+.tbl {
+    margin: 15px 0px;
+}

@@ -1,0 +1,52 @@
+h1 {
+    margin: 15px;
+}
+
+.info {
+
+    input {
+        margin: 15px;
+    }
+}
+
+.btns {
+    margin: 26px 0px;
+    
+    a {
+        padding: 10px;
+        margin: 18px;
+
+        border-radius: 6px;
+        
+        text-decoration: none;
+    }
+
+    .btn1, .btn2 {
+        text-decoration: none;
+        
+        transition: all 0.3s;
+    }
+    
+    .btn1 {
+        background-color: black;
+        color: white;
+        
+        text-decoration: none;
+    }
+    
+    
+    .btn1:hover {
+        color: red;
+    }
+    
+    .btn2 {
+        background-color: red;
+        color: white;
+        
+        text-decoration: none;
+    }
+    
+    .btn2:hover {
+        color: black;
+    }
+}

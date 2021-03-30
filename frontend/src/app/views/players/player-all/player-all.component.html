@@ -1,0 +1,35 @@
+<div class="btns">
+  <a routerLink="/criar" class="btn1">Adicionar</a>
+</div>
+<div class="tbl">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Idade</th>
+        <th scope="col">Gols</th>
+        <th scope="col">Cidade Natal</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let player of players">
+        <tr>
+          <th scope="row">1</th>
+          <td>{{ player.name }}</td>
+          <td>{{ player.age }}</td>
+          <td>{{ player.goals }}</td>
+          <td>{{ player.hometown }}</td>
+          <td><a routerLink="/editar/{{ player.id }}">
+              <img src="../../../../assets/img/icons/editi.svg" alt="">
+            </a></td>
+          <td><a routerLink="/remover/{{ player.id }}">
+              <img src="../../../../assets/img/icons/delete.svg" alt="">
+            </a></td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

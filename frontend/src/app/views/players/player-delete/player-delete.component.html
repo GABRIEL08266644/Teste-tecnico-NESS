@@ -1,0 +1,44 @@
+<div>
+  <h1>
+    Remover Jogador
+  </h1>
+  <div class="info">
+    <form [formGroup]="playerForm">
+      <input 
+        type="text" 
+        name="name" 
+        formControlName="name" 
+        class="form-control" 
+        placeholder="Nome" 
+      >
+
+      <input 
+        type="number"
+        name="age" 
+        formControlName="age" 
+        class="form-control" 
+        placeholder="Idade" 
+      >
+
+      <input 
+      type="number" 
+      name="goals" 
+      formControlName="goals" 
+      class="form-control" 
+      placeholder="Gols" 
+      >
+
+      <input 
+        type="string" 
+        name="hometown" 
+        formControlName="hometown" 
+        class="form-control" 
+        placeholder="Cidade Natal" 
+      >
+    </form>
+  </div>
+  <div class="btns">
+    <a href="/elenco" (click)="apagar()" class="btn1">Remover</a>
+    <a routerLink="/elenco" class="btn2">Cancelar</a>
+  </div>
+</div>
