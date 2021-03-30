@@ -7,7 +7,6 @@ import { PlayerUpdateComponent } from './views/players/player-update/player-upda
 import { PlayerDeleteComponent } from './views/players/player-delete/player-delete.component';
 import { PlayerCreateComponent } from './views/players/player-create/player-create.component';
 
-
 const routes: Routes = [
   {
     path: "",

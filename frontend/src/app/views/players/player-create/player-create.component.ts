@@ -35,5 +35,4 @@ export class PlayerCreateComponent implements OnInit {
     this.playerForm.reset();
     window.location.reload();
   }
-
 }

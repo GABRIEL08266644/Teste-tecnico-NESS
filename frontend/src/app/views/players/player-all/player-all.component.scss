@@ -22,4 +22,19 @@
 
 .tbl {
     margin: 15px 0px;
+
+    td {
+
+        a {
+            margin-left: 10px;
+            padding: 8px 15px;
+            border-radius: 6px;
+            background-color: yellow;
+        }
+
+        .red {
+            background-color: red;
+        }
+    }
+
 }

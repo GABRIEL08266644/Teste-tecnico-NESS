@@ -13,7 +13,6 @@ import { PlayerDeleteComponent } from './views/players/player-delete/player-dele
 import { PlayerUpdateComponent } from './views/players/player-update/player-update.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     AppComponent,

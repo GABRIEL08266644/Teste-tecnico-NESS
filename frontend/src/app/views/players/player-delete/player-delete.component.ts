@@ -29,10 +29,10 @@ export class PlayerDeleteComponent implements OnInit {
         .subscribe(response => {
           this.player = response;
           this.playerForm = this.fb.group({
-            name: [this.player.name, [Validators.required]],
-            age: [this.player.age, [Validators.required]],
-            goals: [this.player.goals, [Validators.required]],
-            hometown: [this.player.hometown, [Validators.required]],
+            name: [{ value: this.player.name, disabled: true }],
+            age: [{ value: this.player.age, disabled: true }],
+            goals: [{ value: this.player.goals, disabled: true }],
+            hometown: [{ value: this.player.hometown, disabled: true }]
           });
         });
     }
@@ -42,7 +42,7 @@ export class PlayerDeleteComponent implements OnInit {
     if(this.id) {
       this.playerService.delete(this.id)
         .subscribe(res => {});
-  
+      
       this.playerForm.reset();
       window.location.href = '/';
     }

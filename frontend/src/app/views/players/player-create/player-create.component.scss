@@ -2,10 +2,27 @@ h1 {
     margin: 15px;
 }
 
-.info {
+form {
+    width: 90vw;
+    
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        input {
+            margin: 15px;
+            width: 50%;
+        }
 
-    input {
-        margin: 15px;
+        input:focus {
+            box-shadow: 0 0 0.3em #ff0000;
+            border: 1px solid rgba(250, 49, 35, 0.7);
+        }
+
+        input:visited {
+            background-color: red;  
+        }
     }
 }
 
@@ -32,8 +49,7 @@ h1 {
         color: white;
         
         text-decoration: none;
-    }
-    
+    } 
     
     .btn1:hover {
         color: red;

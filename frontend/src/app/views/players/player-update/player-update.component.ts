@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Players } from 'src/app/models/players.model';
 import { PlayersServices } from 'src/app/services/players.service';
 
 @Component({

@@ -4,4 +4,5 @@ export class Players {
     age: number;
     goals: number;
 	hometown: string;
+    numberRow?: number;
 }

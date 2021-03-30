@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 import { Players } from 'src/app/models/players.model';
 import { PlayersServices } from "src/app/services/players.service";
 
@@ -12,6 +11,7 @@ import { PlayersServices } from "src/app/services/players.service";
 })
 export class PlayerAllComponent implements OnInit {
   
+  playerSize: number;
   players: Players[]
 
   constructor(
@@ -26,6 +26,11 @@ export class PlayerAllComponent implements OnInit {
   getAllPlayers() {
     this.playersServices.getAll().subscribe(response => {
       this.players = response;
+      this.playerSize = this.players.length;
+
+      for(let i = 0; i < this.playerSize; i++) {
+        this.players[i].numberRow = i + 1;  
+      }
     });
   }
 

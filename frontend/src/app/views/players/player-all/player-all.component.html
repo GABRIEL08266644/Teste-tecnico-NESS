@@ -1,35 +1,45 @@
 <div class="btns">
-  <a routerLink="/criar" class="btn1">Adicionar</a>
+    <a routerLink="/criar" class="btn1">Adicionar</a>
 </div>
 <div class="tbl">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Idade</th>
-        <th scope="col">Gols</th>
-        <th scope="col">Cidade Natal</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <ng-container *ngFor="let player of players">
-        <tr>
-          <th scope="row">1</th>
-          <td>{{ player.name }}</td>
-          <td>{{ player.age }}</td>
-          <td>{{ player.goals }}</td>
-          <td>{{ player.hometown }}</td>
-          <td><a routerLink="/editar/{{ player.id }}">
-              <img src="../../../../assets/img/icons/editi.svg" alt="">
-            </a></td>
-          <td><a routerLink="/remover/{{ player.id }}">
-              <img src="../../../../assets/img/icons/delete.svg" alt="">
-            </a></td>
-        </tr>
-      </ng-container>
-    </tbody>
-  </table>
+    <div class="text-center" *ngIf="playerSize == 0">
+        <h2>Nenhum jogador registrado.</h2>
+    </div>
+    <table class="table" *ngIf="playerSize > 0">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Gols</th>
+                <th scope="col">Cidade Natal</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Remover</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let player of players">
+                <tr>
+                    <th scope="row">{{ player.numberRow }}</th>
+                    <td>{{ player.name }}</td>
+                    <td>{{ player.age }}</td>
+                    <td>{{ player.goals }}</td>
+                    <td>{{ player.hometown }}</td>
+                    <td>
+                        <a routerLink="/editar/{{ player.id }}">
+                            <img src="../../../../assets/img/icons/editi.svg" alt="">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="red" routerLink="/remover/{{ player.id }}">
+                            <img src="../../../../assets/img/icons/delete.svg" alt="">
+                        </a>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+        <div>
+            <p>Total de jogadores: {{ playerSize }}</p>
+        </div>
+    </table>
 </div>
